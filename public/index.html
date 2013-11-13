@@ -26,11 +26,11 @@
         },
         setUrl: function() {
           console.log("setUrl Function Run")
-          this.pass = encoder.encrypt()
+          this.pass = this.encrypt()
         },
         replaceMessageWithUrl: function () {
           console.log("replaceMessageWithUrl Function Run")
-          document.getElementById("message").value = "Go To this URL to Decode: \n" + document.URL.replace("index.html", "decrypt.html") + "?" + this.pass
+          document.getElementById("message").value = "Go To this URL to Decode: \n" + document.URL + "decrypt.html?" + this.pass
         },
         encrypt: function() {
           cypher = CryptoJS.AES.encrypt(this.message, this.password)

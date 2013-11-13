@@ -14,7 +14,7 @@
     <script>
       var decoder = {
         getCypher: function() {
-          this.cypher = document.URL.slice(document.URL.indexOf("?")+1)
+          this.cypher = document.URL.split('?')[1]
         },
         getPassword: function() {
           console.log("getPassword Function Run")
