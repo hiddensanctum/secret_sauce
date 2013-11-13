@@ -1,4 +1,4 @@
-# Smartphone.js
+# Secret Sauce
 
 This is a basic javascript encrypt and decrypt program that allows a user to center a message and encryt it with a password.
 
