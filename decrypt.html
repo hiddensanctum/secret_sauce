@@ -22,7 +22,12 @@
         },
         showMessage: function() {
           this.message = decoder.decrypt()
-          alert("You Message is: \n" + this.message)
+          if (this.message == ""){
+            alert("Incorrect Password")
+          }
+          else {
+            alert("You Message is: \n" + this.message)
+          }
         },
         decrypt: function() {
           cypher = CryptoJS.AES.decrypt(this.cypher, this.password).toString(CryptoJS.enc.Utf8)
