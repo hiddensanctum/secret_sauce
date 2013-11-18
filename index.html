@@ -16,20 +16,15 @@
     <script>
       var encoder = {
         setMessage: function() {
-          console.log("setMessage Function Run")
-          console.log(document.getElementById("message").value)
           this.message = document.getElementById("message").value
         },
         getPassword: function() {
-          console.log("getPassword Function Run")
           this.password = prompt("Please Enter A Password")
         },
         setUrl: function() {
-          console.log("setUrl Function Run")
           this.pass = this.encrypt()
         },
         replaceMessageWithUrl: function () {
-          console.log("replaceMessageWithUrl Function Run")
           document.getElementById("message").value = "Go To this URL to Decode: \n" + document.URL + "decrypt.html?" + this.pass
         },
         encrypt: function() {
@@ -39,16 +34,13 @@
           return cypher
         },
         protect: function() {
-          console.log("Protect Function Run")
           this.setMessage()
-          console.log("Message = " + this.message)
           this.getPassword()
           this.setUrl()
           this.replaceMessageWithUrl()
         }
       }
       document.getElementById("encrypt").onclick = function(){
-        console.log("Button Clicked");
         encoder.protect();
       }
     </script>
